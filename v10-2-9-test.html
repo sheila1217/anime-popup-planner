@@ -1,0 +1,456 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>快閃情報室 · V10.2.1 手機排版修正版</title><style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#252b3a;--muted:#788194;--line:#e7eaf1;--primary:#6458db;--soft:#f0edff;--green:#218b6c;--orange:#b76a1b}*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans TC','Microsoft JhengHei',sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}.shell{max-width:1200px;margin:auto;padding:24px}.header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px}.logo{font-size:24px;font-weight:850;letter-spacing:-.6px}.subtitle{font-size:12px;color:var(--muted);margin-top:5px}.pill{display:inline-block;padding:5px 10px;border-radius:99px;background:var(--soft);color:var(--primary);font-size:12px;font-weight:700}.tabs{display:flex;gap:7px;background:white;padding:6px;border:1px solid var(--line);border-radius:15px;margin-bottom:22px;overflow:auto}.tab{border:0;background:transparent;padding:11px 18px;border-radius:10px;white-space:nowrap;color:#626b7b;font-weight:700}.tab.active{background:var(--primary);color:white}.page{display:none}.page.active{display:block}.heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}h2{font-size:23px;margin:0}h3{margin:0 0 12px;font-size:16px}.muted{color:var(--muted)}.small{font-size:12px}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:16px}.field{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#667085;font-weight:650}.field input,.field select,.field textarea,.input{padding:11px 12px;border:1px solid #dce0ea;background:white;border-radius:10px;min-width:0;color:var(--ink)}.field textarea{resize:vertical}.field input[type=date]{min-width:145px}.field select{min-width:130px}.grow{flex:1}.grow input{width:100%}.btn{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:10px;font-weight:750;color:var(--ink)}.btn.primary{background:var(--primary);color:white;border-color:var(--primary)}.btn.soft{background:var(--soft);border-color:transparent;color:var(--primary)}.btn.danger{color:#bb4557}.btn.sm{padding:7px 9px;font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.stat{background:white;border:1px solid var(--line);border-radius:14px;padding:15px}.stat b{font-size:26px;display:block;margin-top:5px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:16px;min-width:0}.card-top{display:flex;justify-content:space-between;gap:8px;align-items:start}.card-title{font-size:17px;font-weight:800}.detail{font-size:13px;color:#697385;margin-top:7px;line-height:1.5}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.chip{font-size:11px;background:#f2f3f7;border-radius:7px;padding:5px 8px;color:#626a7b}.chip.urgent{background:#fff0e1;color:#a75a16}.chip.ok{background:#e7f7f0;color:#187955}.chip.blue{background:#eaf0ff;color:#4869b8}.card-actions{display:flex;gap:7px;margin-top:14px;flex-wrap:wrap}.empty{padding:35px;text-align:center;background:white;border:1px dashed #d5d9e4;border-radius:15px;color:var(--muted)}.region{margin-bottom:13px}.region-head{display:flex;justify-content:space-between;align-items:center;background:#eeeffb;padding:13px 15px;border-radius:12px;margin-bottom:9px;font-weight:800}.venue{margin:12px 0 8px;padding-left:8px;border-left:3px solid #b6afff;font-weight:800;font-size:14px}.venue-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.schedule-layout{display:grid;grid-template-columns:1fr 1.45fr;gap:15px}.side-panel{background:white;border:1px solid var(--line);border-radius:15px;padding:17px}.daystrip{display:flex;gap:6px;overflow:auto;padding:2px 0 15px}.day{border:1px solid var(--line);background:white;border-radius:11px;min-width:68px;padding:11px 6px;text-align:center;font-size:12px}.day.active{background:var(--primary);color:white;border-color:var(--primary)}.day span{display:block;margin-top:6px;font-size:11px;opacity:.8}.plan-item{background:white;border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0}.plan-item.optional{background:#faf9ff}.plan-top{display:flex;align-items:center;gap:10px}.num{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:var(--soft);color:var(--primary);font-weight:800;flex:none}.plan-text{flex:1;min-width:0}.plan-name{font-weight:800}.plan-meta{font-size:12px;color:var(--muted);margin-top:4px}.plan-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}.plan-actions button{padding:5px 8px;font-size:12px;border:1px solid var(--line);border-radius:7px;background:white}.plan-item.done .plan-name{text-decoration:line-through;color:#9198a6}.panel-title{font-size:15px;font-weight:800;margin-bottom:10px}.pick-list{max-height:420px;overflow:auto}.pick{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}.pick:last-child{border-bottom:0}.pick b{font-size:13px}.pick .detail{margin-top:3px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.form-grid .field input,.form-grid .field select,.form-grid .field textarea{width:100%}.span2{grid-column:span 2}.banner{background:#eeeafd;border:1px solid #e4defc;border-radius:13px;padding:14px;margin-bottom:16px}.banner strong{display:block;margin-bottom:5px}.management{display:grid;grid-template-columns:1fr 1fr;gap:15px}.listrow{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 0;border-bottom:1px solid var(--line)}.listrow:last-child{border-bottom:0}.note{font-size:12px;line-height:1.6;color:var(--muted)}.footer{margin:28px 0;text-align:center;font-size:12px;color:#8a92a3}.modal{position:fixed;inset:0;background:#1e223a88;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.show{display:flex}.modalbox{background:white;border-radius:18px;padding:22px;max-width:440px;width:100%}.modalbox .field{margin-bottom:12px}.modalbox{max-height:90vh;overflow:auto}.toast{position:fixed;bottom:20px;right:20px;background:#303347;color:white;padding:12px 16px;border-radius:10px;display:none;z-index:20}@media(max-width:760px){.shell{padding:15px}.header{align-items:start}.logo{font-size:20px}.tabs{gap:2px}.tab{padding:11px 12px;font-size:13px}.stats{gap:7px}.stat{padding:12px}.stat b{font-size:21px}.grid,.schedule-layout,.management,.venue-list{grid-template-columns:1fr}.toolbar{gap:8px}.field{flex:1 1 130px}.grow{flex:1 1 100%}.form-grid{gap:9px}.heading h2{font-size:21px}}
+
+.event-photo{width:100%;height:142px;object-fit:cover;border-radius:10px;margin:9px 0 2px;background:#f3f4f7}.pick-photo{width:58px;height:58px;object-fit:cover;border-radius:9px;flex:none}.pick-content{flex:1;min-width:0}.pick-visited{font-size:11px;color:#6852bc;font-weight:700;margin-top:5px;line-height:1.5}.pick-visited.done{color:#16836a}.booking-box{display:inline-flex;border:1px solid #d7b36a;background:#fff5d8;color:#86520b;font-size:12px;font-weight:850;padding:6px 9px;border-radius:8px;margin-top:8px}.booking-box.reserved{border-color:#78b69b;background:#e6f7ee;color:#147251}.plan-thumb{width:54px;height:54px;object-fit:cover;border-radius:9px;flex:none}
+
+.region-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:end;margin-bottom:15px}.region-filters .field select,.region-filters .field input{width:100%}
+.booking-details{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}.booking-time{background:#fff0d9;color:#945408;border:1px solid #e7bb75;border-radius:7px;padding:5px 8px;font-weight:850;font-size:12px}.booking-id{background:#eef1fa;color:#495879;border-radius:7px;padding:5px 8px;font-size:12px;font-weight:750}
+.event-extra{margin-top:9px;border-top:1px dashed var(--line);padding-top:8px}.event-extra summary{cursor:pointer;color:#6355bb;font-size:12px;font-weight:750}.event-extra .detail{white-space:pre-wrap;overflow-wrap:anywhere}.photo-feedback{font-size:12px;color:#167b58;font-weight:700}
+@media(max-width:650px){.region-filters{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.region-filters .field{font-size:11px}.region-filters .field select,.region-filters .field input{padding:8px 3px;font-size:11px;min-width:0}}
+
+/* V9 - 日系馬卡龍手帳風：白底、柔和標題區、細實線框 */
+:root{--bg:#fffaf7;--card:#ffffff;--ink:#514759;--muted:#938697;--line:#eedee8;--primary:#a780c8;--soft:#f5eaf9;--green:#498b70;--orange:#a88236}
+body{background:linear-gradient(145deg,#fffaf7 0%,#fdf9ff 52%,#f8fcfb 100%);color:var(--ink)}
+.shell{max-width:1250px}.header{padding:13px 4px}.logo{color:#835f88;letter-spacing:.2px}.logo::before{content:'♡ ';color:#e2a7c5}.subtitle{color:#a08e9d}.pill{background:#f8e8f1;color:#a46b8c}
+.tabs{background:#fff;border-color:#efdfeb;border-radius:22px;box-shadow:0 5px 22px #aa83a012;padding:8px;gap:7px}.tab{border-radius:999px;padding:12px 17px;color:#907c92}.tab.active{background:#ebdcf5;color:#71518e}.tab:hover:not(.active){background:#fff3f9}
+.btn,.plan-actions button{border-radius:12px;border-color:#eadce8;transition:background .15s,transform .15s}.btn:hover:not(:disabled),.plan-actions button:hover:not(:disabled){transform:translateY(-1px);background:#fff4fa}.btn.primary{background:#b18bd0;border-color:#b18bd0;color:#fff}.btn.primary:hover{background:#9b70c2}.btn.soft{background:#f7eafa;color:#8c65b3}.btn.danger{color:#b76079}
+.field input,.field select,.field textarea,.input{border-radius:13px;border-color:#e9dce8;background:#fff}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #e4c6f2;outline-offset:1px}.field{color:#826e82}
+.card,.plan-item,.side-panel,.stat,.region,.region-head{box-shadow:0 3px 12px #c8aac20d}
+.card{border:1px solid #e9cddd;border-radius:19px;background:linear-gradient(to bottom,#fcebf4 0 52px,#fff 52px);padding:17px;overflow:hidden}
+.card:nth-child(4n+2){border-color:#d7c7ef;background:linear-gradient(to bottom,#f2eafa 0 52px,#fff 52px)}
+.card:nth-child(4n+3){border-color:#c8e7dc;background:linear-gradient(to bottom,#eaf8f1 0 52px,#fff 52px)}
+.card:nth-child(4n+4){border-color:#e7d7ad;background:linear-gradient(to bottom,#fff4db 0 52px,#fff 52px)}
+.card-title{color:#66526a}.card-top{min-height:42px}.detail{color:#82778b}.chip{border-radius:999px}.chip.ok{background:#e5f5ed;color:#38795e}.chip.urgent{background:#fff0d7;color:#926922}.chip.blue{background:#f0eafa;color:#8062a3}
+.side-panel{border:1px solid #ebdce8;border-radius:20px}.panel-title,h3{color:#7d6186}.banner{background:#f9eff9;border-color:#eddcf0;border-radius:18px}.stat{border-color:#eadde8;border-radius:18px}.stat:nth-child(1){background:#fff3f8}.stat:nth-child(2){background:#f6f0ff}.stat:nth-child(3){background:#edf9f4}
+.day{border-color:#ecdaea;border-radius:15px}.day.active{background:#ead8f5;border-color:#d8bfe9;color:#77568c}.day:hover{background:#faf0fa}
+.plan-item{border:1px solid #e8d39c;border-radius:18px;background:linear-gradient(to bottom,#fff4d9 0 45px,#fff 45px);padding:14px}.plan-item.done{border-color:#a9d7bf;background:linear-gradient(to bottom,#e8f7ee 0 45px,#fff 45px)}.plan-item.optional{border-color:#d5c4e8;background:linear-gradient(to bottom,#f3eafa 0 45px,#fff 45px)}.plan-item.optional.done{border-color:#a9d7bf;background:linear-gradient(to bottom,#e8f7ee 0 45px,#fff 45px)}.plan-item.done .plan-name{color:#638a74}.plan-top{min-height:46px}.num{background:#f7e9f4;color:#986b9c;border-radius:10px}
+.pick{border:1px solid #efdfeb;border-radius:15px;padding:12px;margin:8px 0;background:#fff}.pick:nth-child(3n+1){border-color:#efd1e0}.pick:nth-child(3n+2){border-color:#d6c9ef}.pick:nth-child(3n){border-color:#cce6d9}.pick:last-child{border-bottom:1px solid #efdfeb}
+.region{border:1px solid #e3d3ef;border-radius:20px;background:#fff;padding:13px}.region-head{background:#f1e8fa;color:#75568d;border-radius:14px}.venue{border-left-color:#d8bce7;color:#856a90}.venue-list .card{min-height:150px}
+.booking-box.reserved{background:#fcecf3;border-color:#edc4d8;color:#a45b7c}.booking-time{background:#fff0dc}.booking-conditional{padding:12px;background:#fff8fc;border:1px solid #eedcea;border-radius:15px}.booking-conditional .form-grid{gap:10px}.live-link{display:inline-flex;align-items:center;color:#8864a5!important;background:#f6ecfa!important;border-color:#e5d5ed!important;text-decoration:none;margin-top:6px}
+.empty{border-color:#e6cce1;background:#fffafc;border-radius:18px}.modalbox{border:1px solid #ebd5e8;box-shadow:0 20px 65px #53405930}.toast{background:#745c7d}.event-photo,.pick-photo,.plan-thumb{border-radius:13px}
+@media(max-width:760px){.shell{padding:13px}.tab{padding:10px 13px}.card{padding:14px}.side-panel{padding:13px}.plan-item{padding:11px}}
+
+/* V9 readability refinements */
+#regionGroups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+#regionGroups .region{margin:0;min-width:0}
+#regionGroups .venue-list{grid-template-columns:1fr;gap:13px}
+#regionGroups .region-head{margin-bottom:16px}
+#regionGroups .venue{display:inline-block;background:#f9f3fd;border:1px solid #eadcf4;border-left:4px solid #d8bce7;border-radius:9px;padding:9px 12px;margin:10px 0 13px;line-height:1.5}
+.card{background:linear-gradient(to bottom,#fcebf4 0 62px,#fff 62px)!important;padding:17px!important}
+.card:nth-child(4n+2){background:linear-gradient(to bottom,#f2eafa 0 62px,#fff 62px)!important}
+.card:nth-child(4n+3){background:linear-gradient(to bottom,#eaf8f1 0 62px,#fff 62px)!important}
+.card:nth-child(4n+4){background:linear-gradient(to bottom,#fff4db 0 62px,#fff 62px)!important}
+.card .card-top{min-height:44px;margin-bottom:16px;align-items:center}
+.card .detail{margin-top:10px;line-height:1.65}
+.card .card-actions{margin-top:17px;gap:9px}
+.plan-item{background:linear-gradient(to bottom,#fff4d9 0 54px,#fff 54px);padding:14px;margin:12px 0}
+.plan-item.done{background:linear-gradient(to bottom,#e8f7ee 0 54px,#fff 54px)}
+.plan-item.optional{background:linear-gradient(to bottom,#f3eafa 0 54px,#fff 54px)}
+.plan-item.optional.done{background:linear-gradient(to bottom,#e8f7ee 0 54px,#fff 54px)}
+.plan-top{min-height:46px;margin-bottom:12px}
+.plan-meta{margin-top:9px;line-height:1.6}
+.plan-actions{margin-top:15px}
+.card-actions .btn.primary,.card-actions .btn.soft{font-weight:800}
+@media(max-width:760px){#regionGroups{grid-template-columns:1fr}.card{padding:14px!important}.card .card-top{margin-bottom:17px}}
+
+/* V10 mobile-first layout, real header blocks rather than gradient clipping */
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:4px}.tab{min-width:0;white-space:nowrap;padding:12px 5px;text-align:center}
+.schedule-layout{display:flex;flex-direction:column;gap:22px}.schedule-layout .plan-panel{order:1;min-width:0}.schedule-layout .picker-panel{order:2;min-width:0}
+.schedule-heading{margin:20px 0 18px}.schedule-heading h2{font-size:22px}#tripDeleteBtn{margin-bottom:17px}#tripBanner{margin-top:14px;margin-bottom:12px}
+.card,.card:nth-child(n){background:#fff!important;padding:0!important;overflow:hidden}
+.card .card-top{margin:0!important;min-height:0;display:flex;align-items:center;gap:12px;padding:15px;background:#fcebf4}
+.card:nth-child(4n+2) .card-top{background:#f2eafa}.card:nth-child(4n+3) .card-top{background:#eaf8f1}.card:nth-child(4n+4) .card-top{background:#fff4db}
+.card .card-top>div{min-width:0;flex:1}.card .card-top .detail{margin:5px 0 0!important;line-height:1.45;color:#8f728b;font-size:13px}
+.card>.detail,.card>.event-extra,.card>.card-actions,.card>.booking-box,.card>.booking-details,.card>.photo-toggle{margin-left:15px;margin-right:15px}
+.card>.detail{margin-top:14px!important;line-height:1.75}.card>.card-actions{margin-bottom:16px}.card .chip{flex-shrink:0;max-width:40%;text-align:center}
+.card .event-photo{height:85px;width:100px;object-fit:cover;margin:0}.photo-toggle{display:flex;align-items:center;gap:10px;margin-top:12px;margin-bottom:5px}.photo-toggle button{margin-left:auto}
+.photo-toggle.expanded .event-photo{height:auto;width:100%;max-height:none;object-fit:contain}.photo-toggle.expanded{flex-wrap:wrap}.photo-toggle.expanded img{order:2}
+.plan-item,.plan-item.done,.plan-item.optional,.plan-item.optional.done{background:#fff!important;padding:0;margin:12px 0;overflow:hidden}
+.plan-item .plan-top{margin:0;align-items:flex-start;padding:13px;gap:9px;position:relative}
+.plan-item .plan-top:before{content:'';position:absolute;left:0;right:0;top:0;height:58px;background:#fff4d9;z-index:0}
+.plan-item.done .plan-top:before,.plan-item.optional.done .plan-top:before{background:#e8f7ee}.plan-item.optional:not(.done) .plan-top:before{background:#f3eafa}
+.plan-item .plan-top>*{position:relative;z-index:1}.plan-item .plan-text{min-width:0}.plan-item .plan-name{font-size:16px;line-height:1.45;overflow-wrap:anywhere}.plan-item .plan-type{font-size:12px;color:#97768e;margin:4px 0 0;line-height:1.5}
+.plan-item .plan-meta{margin-top:20px;line-height:1.6;overflow-wrap:anywhere}.plan-item .plan-actions,.plan-item>.event-extra{margin:12px 13px 14px}.plan-item .plan-thumb{object-fit:cover}
+.pick{align-items:flex-start;flex-wrap:wrap}.pick-content{flex:1 1 65%;min-width:0}.pick-title{font-size:14px;color:#624d77;font-weight:850}.pick-type{font-size:12px;color:#a37a99;margin-top:4px}.pick-line{display:flex;align-items:flex-start;gap:5px;margin-top:6px;color:#74697a;font-size:12px;line-height:1.6}.pick-line .symbol{color:#9c80b2;flex:none}.pick>.btn{margin-left:auto}.pick-photo{width:46px;height:46px}
+.view-switch{display:flex;gap:8px;margin:0 0 15px}.view-switch .btn{flex:1}.overview-area{border:1px solid #e7d4ef;border-radius:18px;background:#fff;padding:13px}.overview-area-title{background:#f1e8fa;border-radius:12px;padding:12px;color:#785d90;font-weight:800;margin-bottom:12px}.overview-area-venue{font-size:13px;color:#84658c;border-left:3px solid #dcc4e9;padding:6px 9px;margin:13px 0 10px}.overview-area .card{margin-bottom:12px}
+.toolbar .field{min-width:0}.toolbar .field input,.toolbar .field select{width:100%;min-width:0;height:46px}.booking-check{display:flex;align-items:center;gap:9px;color:#785f82;font-size:13px;font-weight:750}.booking-check input{width:18px;height:18px;accent-color:#ad82c8}.area-tools{display:flex;gap:7px;margin:10px 0}.area-tools input{flex:1;min-width:0;padding:9px;border:1px solid #e9dce8;border-radius:10px}.area-tag{display:inline-flex;gap:5px;align-items:center;margin:4px;padding:5px 7px;background:#f7effa;border-radius:10px;font-size:12px}.area-tag button{border:0;background:transparent;color:#b76079}
+@media(max-width:760px){.shell{padding:12px}.tab{font-size:12px;padding:11px 2px}.toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.toolbar .field{width:100%;min-width:0}.toolbar .field.grow{grid-column:span 2}.toolbar>.btn{min-width:0}.card .card-top{padding:14px}.card .card-top .detail{font-size:12px}.card .chip{font-size:11px}.plan-item .plan-top:before{height:60px}.plan-item .plan-meta{margin-top:19px}.pick{padding:12px}.pick .pick-photo{width:45px;height:45px}.stats{gap:7px}.stat{padding:10px}.stat b{font-size:20px}.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.form-grid .field{min-width:0}.form-grid .field input,.form-grid .field select{min-width:0}.booking-check{grid-column:span 2}}
+@media(max-width:370px){.tab{font-size:11px}.card .card-top{gap:5px}.plan-item .plan-thumb{width:40px;height:40px}.plan-item .num{width:24px;height:24px}}
+
+/* V10.1: mobile form alignment only; preserve existing visual design */
+@media(max-width:760px){
+ .toolbar{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+ .toolbar>.field{min-width:0;width:100%;flex:none;display:grid;grid-template-rows:minmax(30px,auto) 46px;align-content:end;gap:5px;overflow:hidden}
+ .toolbar>.field input,.toolbar>.field select{box-sizing:border-box;width:100%;min-width:0;max-width:100%;height:46px;margin:0;font-size:12px;padding:8px 7px}
+ .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+ .form-grid>.field:not(.span2){min-width:0;width:100%;display:grid;grid-template-rows:minmax(40px,auto) 46px;gap:5px;align-content:start;overflow:hidden;overflow-wrap:anywhere}
+ .form-grid>.field:not(.span2)>input,.form-grid>.field:not(.span2)>select{width:100%;min-width:0;max-width:100%;height:46px;box-sizing:border-box;margin:0;font-size:12px;padding:8px 7px}
+ .form-grid .span2{min-width:0}
+ .form-grid input[type=date]{min-width:0!important;max-width:100%;-webkit-min-logical-width:0}
+}
+
+/* V10.2 layout refinement: left-aligned itinerary text, right-side photo. */
+.plan-item .plan-top{display:flex;align-items:flex-start;gap:9px}
+.plan-item .plan-text{flex:1;min-width:0;padding-right:0}
+.plan-item .plan-thumb{order:3;width:84px;height:84px;object-fit:cover;flex:none;align-self:flex-start;margin:29px 0 0;border-radius:11px}
+.plan-item .plan-top>input[type="checkbox"]{order:4;flex:none;margin:4px 0 0 0}
+.plan-item .num{order:1}.plan-item .plan-text{order:2}
+.booking-visit-datetime{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:9px;color:#66546e;font-size:13px;font-weight:750}
+.booking-extra-note{margin-top:9px;display:flex;flex-direction:column;gap:4px;padding:9px 11px;border-radius:11px;background:#faf6fc;color:#695875;font-size:12px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere}
+.booking-extra-label{font-weight:800;color:#957ba2;font-size:11px}
+@media(max-width:760px){.plan-item .plan-thumb{width:75px;height:85px;margin-top:34px}.plan-item .plan-top{gap:7px}.plan-item .num{width:25px;height:25px}}
+@media(max-width:390px){.plan-item .plan-thumb{width:60px;height:75px}.plan-item .plan-top{gap:5px}}
+
+/* V10.2.1: Mobile layout corrections. Visual only, no cloud data changes. */
+html,body{max-width:100%;overflow-x:clip}
+.shell,.page,.side-panel,.management,.form-grid,.plan-panel,.card,.plan-item{min-width:0;max-width:100%}
+.plan-item .plan-top{display:grid;grid-template-columns:28px minmax(0,1fr) auto;column-gap:10px;row-gap:0;align-items:start}
+.plan-item .num{grid-column:1;grid-row:1}
+.plan-item .plan-text{grid-column:2 / 4;grid-row:1 / 3;display:grid;grid-template-columns:minmax(0,1fr) 88px;min-width:0;gap:0 12px}
+.plan-item .plan-heading{grid-column:1 / -1;min-width:0;min-height:57px;padding-right:26px}
+.plan-item .plan-content{grid-column:1;min-width:0;padding-top:10px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.plan-item .plan-meta{margin:0;line-height:1.6}
+.plan-item .plan-thumb{grid-column:3;grid-row:2;width:82px;height:95px;object-fit:contain;align-self:start;margin:10px 0 0;border:1px solid #f1e6ed;background:#fff}
+.plan-item .plan-top>input[type=checkbox]{grid-column:3;grid-row:1;justify-self:end;order:initial;margin:4px 0 0;z-index:3}
+.plan-item .plan-text .btn{display:inline-flex;align-items:center;justify-content:center;max-width:100%;min-height:34px;white-space:normal;text-align:center;margin:0}
+.plan-item .plan-content .live-link{margin:0}
+.plan-item .plan-top:has(.plan-thumb) .plan-content{padding-right:0}
+.plan-item .plan-top:has(.plan-thumb) .plan-text{padding-right:0}
+.plan-item .plan-top:has(.plan-thumb) .plan-content{max-width:calc(100% - 0px)}
+.plan-item .plan-top:has(.plan-thumb) .plan-text{grid-template-columns:minmax(0,1fr) 88px}
+.plan-item .plan-top:not(:has(.plan-thumb)) .plan-text{grid-template-columns:1fr}
+.plan-item .plan-top:not(:has(.plan-thumb)) .plan-content{grid-column:1/-1}
+.plan-item .plan-top:has(.plan-thumb) .plan-content{grid-column:1}
+.plan-item .plan-top:has(.plan-thumb) .plan-heading{grid-column:1/-1}
+.plan-item .plan-top:has(.plan-thumb) .plan-thumb{grid-column:3;grid-row:2}
+/* Link controls: matching height and spacing across sections. */
+.card-actions>a.btn,.plan-content>a.btn{min-height:36px;display:inline-flex;align-items:center;justify-content:center;line-height:1.4;box-sizing:border-box}
+.card-actions{align-items:center}
+.card-actions>a.btn{padding:8px 11px}
+.card>.booking-box{margin-left:15px;margin-right:15px}
+.card>.booking-visit-datetime{margin:9px 15px 0;padding-left:0;justify-content:flex-start;gap:16px}
+.card>.booking-extra-note{margin:11px 15px 0}
+.booking-visit-datetime span{display:inline-flex;align-items:center;white-space:nowrap}
+/* Form: prevent tall labels from overlapping next row. */
+.form-grid{align-items:stretch;row-gap:17px;column-gap:12px}
+.form-grid>.field:not(.span2){display:flex;flex-direction:column;gap:9px;min-width:0;overflow:visible;justify-content:flex-end}
+.form-grid>.field:not(.span2)>input,.form-grid>.field:not(.span2)>select{flex:none;width:100%;height:46px;min-height:46px;min-width:0;max-width:100%;margin:0}
+.form-grid>.field input[type=date]{min-width:0!important;width:100%;max-width:100%;font-size:14px!important}
+.form-grid>.field.span2{min-width:0}
+@media(max-width:760px){
+ .management{grid-template-columns:minmax(0,1fr)}
+ .side-panel{padding:14px;overflow:visible}
+ .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:19px;column-gap:12px}
+ .form-grid>.field:not(.span2){display:flex;grid-template-rows:none;gap:8px;min-height:0;overflow:visible;align-self:stretch}
+ .form-grid>.field:not(.span2)>input,.form-grid>.field:not(.span2)>select{height:46px;flex:none;font-size:13px;padding:8px 9px}
+ .plan-item .plan-top{grid-template-columns:27px minmax(0,1fr) 24px;gap:8px;padding:13px}
+ .plan-item .plan-text{grid-column:2/4;grid-row:1/3;grid-template-columns:minmax(0,1fr) 78px;column-gap:10px}
+ .plan-item .plan-heading{min-height:58px}
+ .plan-item .plan-content{padding-top:10px;gap:9px}
+ .plan-item .plan-thumb{grid-column:3;grid-row:2;width:76px;height:91px;margin-top:8px}
+ .plan-item .plan-top>input[type=checkbox]{grid-column:3;grid-row:1}
+ .plan-item .plan-content .btn{font-size:12px;padding:7px 9px}
+}
+@media(max-width:390px){.plan-item .plan-text{grid-template-columns:minmax(0,1fr) 67px;column-gap:7px}.plan-item .plan-thumb{width:66px;height:83px}.form-grid{column-gap:10px}}
+
+.plan-item .plan-thumb,.plan-item .plan-top:has(.plan-thumb) .plan-thumb{grid-column:2;grid-row:2}
+.plan-item .plan-top>input[type=checkbox]{position:absolute;top:13px;right:13px}
+
+/* V10.2.2: iOS Safari native date controls must not expand beyond their grid cells. */
+#eventForm .form-grid>.event-date-field{min-width:0!important;max-width:100%;width:100%;overflow:hidden!important;display:flex;flex-direction:column;align-self:stretch;justify-content:flex-end;gap:8px}
+#eventForm .form-grid>.event-date-field input[type="date"]{display:block;box-sizing:border-box!important;min-width:0!important;max-width:100%!important;width:100%!important;min-height:46px;height:46px;padding:8px 5px!important;font-size:12px!important;letter-spacing:-.3px;overflow:hidden}
+@media(max-width:760px){#eventForm .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:12px}#eventForm .form-grid>.event-date-field{grid-column:auto;flex:initial!important}}
+
+/* V10.2.3: only additive, independently collapsible information sections */
+.booking-collapse,.planned-dates-collapse{margin:10px 0;border:1px solid #ead8e8;border-radius:13px;background:#fff;overflow:hidden;max-width:100%;box-sizing:border-box}
+.booking-collapse>summary,.planned-dates-collapse>summary{list-style:none;cursor:pointer;padding:10px 12px;color:#805d91;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.booking-collapse>summary::-webkit-details-marker,.planned-dates-collapse>summary::-webkit-details-marker{display:none}
+.booking-collapse>summary:after,.planned-dates-collapse>summary:after{content:'⌄';font-size:18px;color:#9476a4}
+.booking-collapse[open]>summary:after,.planned-dates-collapse[open]>summary:after{content:'⌃'}
+.booking-collapse .booking-box{display:inline-flex;margin:0;max-width:100%;box-sizing:border-box}
+.booking-collapse-body,.planned-dates-body{padding:10px 12px 12px;border-top:1px dashed #e8dce7;line-height:1.7;overflow-wrap:anywhere}
+.booking-detail-line+.booking-detail-line{margin-top:5px}
+.planned-dates-body .pick-visited{margin:5px 0}
+.plan-item .booking-collapse,.plan-item .event-extra{max-width:100%}
+.card>.booking-collapse,.card>.planned-dates-collapse{margin-left:15px;margin-right:15px}
+@media(max-width:600px){.booking-collapse>summary,.planned-dates-collapse>summary{padding:9px 10px}.booking-collapse-body,.planned-dates-body{padding:9px 10px}}
+
+/* V10.2.5 compact disclosure and horizontal links — presentation only */
+.booking-collapse,.planned-dates-collapse,.event-extra{border:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;margin:7px 0!important;padding:0!important;max-width:100%!important}
+.booking-collapse>summary,.planned-dates-collapse>summary,.event-extra>summary{display:list-item!important;list-style:none!important;padding:0!important;margin:0!important;color:#82639a!important;font-size:12px!important;font-weight:750!important;line-height:1.65!important;cursor:pointer!important}
+.booking-collapse>summary{color:#4d78bd!important}
+.booking-collapse>summary:before,.planned-dates-collapse>summary:before,.event-extra>summary:before{content:'▶'!important;display:inline-block!important;font-size:10px!important;margin-right:5px!important;transform:none!important}
+.booking-collapse[open]>summary:before,.planned-dates-collapse[open]>summary:before,.event-extra[open]>summary:before{content:'▼'!important}
+.booking-collapse>summary:after,.planned-dates-collapse>summary:after,.event-extra>summary:after{content:none!important}
+.booking-collapse-body,.planned-dates-body,.event-extra .detail{border:0!important;padding:5px 0 4px 15px!important;margin:0!important;font-size:12px!important;line-height:1.65!important}
+.card>.booking-collapse,.card>.planned-dates-collapse{margin-left:15px!important;margin-right:15px!important}
+.event-links{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:7px;min-width:0}
+.event-links .btn{margin:0!important;white-space:nowrap;font-size:11px;padding:7px 9px}
+.plan-item .plan-content .event-links{margin-top:8px}
+.pick{display:flex!important;flex-wrap:nowrap!important;align-items:flex-start!important;gap:10px!important}
+.pick-content{flex:1 1 auto!important;min-width:0!important}
+.pick-side{display:flex;flex:0 0 78px;flex-direction:column;align-items:stretch;gap:9px}
+.pick-side .btn{margin:0!important;text-align:center;white-space:nowrap}
+.pick-side .pick-photo{width:78px!important;height:78px!important;object-fit:contain!important;border:1px solid #f0e5ed;padding:3px}
+.pick .event-links{gap:5px}
+.pick .event-links .btn{font-size:10px;padding:6px 7px}
+@media(max-width:390px){.pick-side{flex-basis:66px}.pick-side .pick-photo{width:66px!important;height:66px!important}.event-links .btn{font-size:10px;padding:6px 7px}}
+
+/* V10.2.8: mobile alignment fixes only; no state or Firebase changes. */
+@media(max-width:760px){
+  /* Date input occupies exactly the same grid width and height as other fields. */
+  #eventForm .form-grid>.event-date-field{width:auto!important;min-width:0!important;max-width:none!important;overflow:visible!important;align-self:stretch!important}
+  #eventForm .form-grid>.event-date-field input[type="date"]{width:100%!important;min-width:0!important;max-width:100%!important;height:46px!important;min-height:46px!important;box-sizing:border-box!important;padding:8px 6px!important;font-size:13px!important;letter-spacing:normal!important;overflow:visible!important;-webkit-appearance:none;appearance:none;background:#fff;border-radius:12px}
+  #eventForm input[type="date"]::-webkit-date-and-time-value{text-align:left;min-width:0}
+  #eventForm input[type="date"]::-webkit-datetime-edit{padding:0;min-width:0;font-size:12px}
+  #eventForm input[type="date"]::-webkit-calendar-picker-indicator{margin:0;flex-shrink:0}
+  /* Overview filter date: keep the native control inside its original cell. */
+  #overview .toolbar>.field{display:flex!important;flex-direction:column!important;justify-content:flex-end!important;gap:7px!important;overflow:visible!important;min-width:0!important}
+  #overview .toolbar>.field>input[type="date"]{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;height:46px!important;min-height:46px!important;padding:8px 6px!important;font-size:13px!important;-webkit-appearance:none;appearance:none;background:#fff;border-radius:12px}
+  #overview .toolbar input[type="date"]::-webkit-date-and-time-value{text-align:left;min-width:0}
+  #overview .toolbar input[type="date"]::-webkit-datetime-edit{padding:0;min-width:0;font-size:12px}
+  #overview .toolbar input[type="date"]::-webkit-calendar-picker-indicator{margin:0;flex-shrink:0}
+}
+/* Align all three compact disclosures to the same left text edge. */
+.plan-item .booking-collapse,.plan-item .planned-dates-collapse,.plan-item .event-extra{margin-left:16px!important;margin-right:12px!important}
+.plan-item .plan-content .booking-collapse,.plan-item .plan-content .planned-dates-collapse,.plan-item .plan-content .event-extra{margin-left:0!important}
+.card>.booking-collapse,.card>.planned-dates-collapse,.card>.event-extra{margin-left:15px!important;margin-right:15px!important}
+.card .event-extra:not(.plan-item .event-extra){margin-left:15px!important;margin-right:15px!important}
+.pick-content>.booking-collapse,.pick-content>.planned-dates-collapse,.pick-content>.event-extra{margin-left:0!important;margin-right:0!important}
+/* Details markers follow one consistent inset, including Safari. */
+.booking-collapse>summary,.planned-dates-collapse>summary,.event-extra>summary{display:block!important;list-style:none!important;text-indent:0!important;padding-left:0!important}
+.booking-collapse>summary::-webkit-details-marker,.planned-dates-collapse>summary::-webkit-details-marker,.event-extra>summary::-webkit-details-marker{display:none!important}
+
+/* V10.2.8: visual alignment only; data, bookings and sync unchanged. */
+.plan-item>.event-extra,.plan-item>.planned-dates-collapse,.plan-item>.booking-collapse{
+  margin-left:51px!important;margin-right:13px!important;
+}
+.plan-item .plan-wide-links{
+  margin:9px 13px 12px 51px!important;
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center;gap:6px;min-width:0;
+}
+.plan-item .plan-wide-links .btn{
+  flex:0 1 auto;min-width:0;white-space:nowrap!important;
+  font-size:11px!important;padding:7px 8px!important;
+}
+/* Overview card links: restore the same interior inset as other content. */
+.card>.event-links{margin:8px 15px 16px!important;max-width:calc(100% - 30px);box-sizing:border-box;}
+.card>.event-links .btn{flex:0 1 auto;min-width:0;}
+@media(max-width:390px){
+ .plan-item .plan-wide-links{gap:4px;margin-left:49px!important}
+ .plan-item .plan-wide-links .btn{font-size:10px!important;padding:6px 5px!important}
+}
+
+/* V10.2.8: itinerary-only compact stacking; other pages untouched. */
+.plan-item .plan-content .plan-wide-links{margin:5px 0 0!important;display:flex!important;flex-flow:row nowrap!important;align-items:center;gap:6px;width:max-content;max-width:calc(100vw - 110px)}
+.plan-item .plan-content .plan-wide-links .btn{font-size:11px!important;padding:6px 7px!important;white-space:nowrap!important;min-height:32px}
+.plan-item .plan-content>.event-extra,.plan-item .plan-content>.planned-dates-collapse,.plan-item .plan-content>.booking-collapse{margin:3px 0 0!important;width:100%;max-width:100%;}
+.plan-item .plan-content{gap:6px!important;padding-top:7px!important}
+.plan-item .plan-thumb{margin-top:7px!important}
+</style><style id="v1024-planned-dates-style">
+.planned-dates-body .pick-visited{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:7px 0;border-bottom:1px solid #f0e9f1}
+.planned-dates-body .pick-visited:last-child{border-bottom:0}
+.planned-day{font-weight:750;color:#675774;min-width:48px}
+.planned-kind{font-size:12px;color:#8c7b91;background:#f7f2f8;border-radius:7px;padding:3px 7px}
+.planned-state{font-size:12px;color:#81808b;margin-left:auto}
+.planned-state.is-done{color:#23845e;font-weight:750}
+.plan-item>.planned-dates-collapse{margin:10px 12px 12px}
+@media(max-width:600px){.planned-dates-body .pick-visited{gap:6px}.planned-state{margin-left:0}}
+</style>
+</head><body><div id="firebase-auth-test" style="position:sticky;top:0;z-index:1000;background:#f0edff;border-bottom:1px solid #ddd7ff;padding:9px 14px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;font-size:13px"><span id="firebase-auth-status">V10.2 雲端同步測試｜尚未設定 Firebase 連線</span><button id="firebase-login" type="button" class="btn sm" disabled>使用 Google 登入</button><button id="firebase-logout" type="button" class="btn sm" style="display:none">登出</button></div><main class="shell"><header class="header"><div><div class="logo">✦ 快閃情報室 <span class="pill">Prototype V10.1</span></div><div class="subtitle">東京動漫活動情報 × 代購跑店安排</div></div><button class="btn sm" onclick="toast('雲端版已停用一鍵重設，避免誤刪共用資料')">重設示範</button></header><nav class="tabs"><button class="tab active" data-tab="schedule">☷ 行程安排</button><button class="tab" data-tab="overview">◫ 活動總覽</button><button class="tab" data-tab="manage">✎ 情報管理</button></nav>
+<section id="overview" class="page"><div class="heading"><div><h2>活動總覽</h2><div class="muted small">自由查詢日期、地區與活動狀態</div></div><button class="btn soft" onclick="switchTab('manage')">＋ 新增情報</button></div><div class="toolbar"><label class="field">代購期間<select id="overviewTrip" onchange="renderOverview()"></select></label><label class="field">查看日期<input id="filterDate" type="date" value="" onchange="renderOverview()"></label><button type="button" class="btn soft" onclick="document.getElementById('filterDate').value='';renderOverview()">重置日期</button><label class="field">地區<select id="filterArea" onchange="renderOverview()"></select></label><label class="field">狀態<select id="filterStatus" onchange="renderOverview()"><option value="active">當天進行中</option><option value="ending">3 天內結束</option><option value="upcoming">尚未開始</option><option value="all">全部活動</option></select></label><label class="field">加入行程<select id="filterJoined" onchange="renderOverview()"><option value="all">全部情報</option><option value="joined">已加入行程</option><option value="notjoined">尚未加入</option></select></label><label class="field grow">作品／活動搜尋<input id="filterText" placeholder="例如：銀魂、澀谷、LOFT" oninput="renderOverview()"></label></div><div class="view-switch"><button type="button" id="viewCards" class="btn primary" onclick="setOverviewView('cards')">活動卡片</button><button type="button" id="viewArea" class="btn" onclick="setOverviewView('area')">依地區整理</button></div><div class="stats" id="stats"></div><div class="grid" id="eventGrid"></div></section>
+<div id="regions" hidden><input id="regionDate" type="date" value="2026-11-03"><select id="regionMode"><option value="all">全部</option></select><select id="regionArea"><option value="all">全部</option></select><div id="regionGroups"></div></div>
+<section id="schedule" class="page active"><div class="toolbar"><label class="field">代購行程<select id="tripSelect" onchange="changeTrip()"></select></label><button class="btn" onclick="addTrip()">＋ 新增代購行程</button></div><button class="btn sm" onclick="openTripModal(true)">編輯本次行程日期</button><button id="tripDeleteBtn" class="btn sm danger" onclick="deleteTripNow()">刪除行程</button><div class="banner" id="tripBanner"></div><div class="heading schedule-heading"><div><h2>行程安排</h2><div class="muted small">自由排序 · 重複造訪 · 有空再去</div></div><button class="btn soft" onclick="openQuick()">＋ 臨時地點</button></div><div id="pasteBar" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0"></div><div class="daystrip" id="daystrip"></div><div class="schedule-layout"><div class="side-panel picker-panel"><div class="panel-title">情報庫 · 從這裡加入行程</div><label class="field">搜尋作品或地點<input id="pickSearch" placeholder="輸入名稱、地區、商場" oninput="renderPicker()"></label><div class="note" style="margin:10px 0">點「＋ 加入」會直接排入上方選取的日期，預設為主要行程；可重複加入其他日期。</div><div class="pick-list" id="picker"></div></div><div class="plan-panel"><div class="panel-title">今日主要行程 <span class="muted small">（按 ↑ ↓ 調整順序）</span></div><div id="mainPlan"></div><div class="panel-title" style="margin-top:19px">有空再去 <span class="muted small">（非必要）</span></div><div id="optionalPlan"></div></div></div></section>
+<section id="manage" class="page"><div class="heading"><div><h2>情報管理</h2><div class="muted small">新增／修改活動，匯入及匯出 CSV</div></div><button class="btn" onclick="exportCSV()">↓ 匯出 CSV</button></div><div class="banner"><strong>空白測試版 · 目前沒有任何活動情報</strong><div class="note">V10.2 測試版：活動、預約、行程由 Firebase Firestore 共用；僅授權的兩個 Google 帳號可讀寫。匯入 CSV 會新增資料，請留意重複項目。活動照片會隨活動資料儲存在 Firestore；照片過大可能超過單筆文件大小限制。</div></div><div class="management"><div class="side-panel"><h3 id="formTitle">新增活動情報</h3><form id="eventForm"><input type="hidden" id="editId"><div class="form-grid"><label class="field">作品名稱 *<input id="evName" required placeholder="例如：排球少年"></label><label class="field">活動名稱<input id="evType" placeholder="例如：快閃店"></label><label class="field">地區 *<select id="evArea" required></select></label><label class="field">商場／地點 *<input id="evVenue" required placeholder="TOWER RECORDS 澀谷店"></label><label class="field">官方即時公告／庫存 X 連結（選填）<input id="evLiveUrl" type="url" placeholder="https://x.com/... 或活動公告網址"></label><label class="field">官方連結<input id="evUrl" type="url" placeholder="https://..."></label><label class="field event-date-field">開始日期 *<input id="evStart" type="date"></label><label class="field event-date-field">結束日期 *<input id="evEnd" type="date"></label><label class="field span2">活動照片（選填）<input id="evPhoto" type="file" accept="image/*" onchange="previewEventPhoto(this)"><span class="note">可選擇 JPG／PNG／HEIC（部分瀏覽器不支援 HEIC），圖片會縮小儲存在目前瀏覽器。</span><span id="photoFeedback" class="photo-feedback" aria-live="polite"></span><img id="evPhotoPreview" style="display:none;max-width:100%;max-height:160px;object-fit:contain;border-radius:9px"><button type="button" class="btn sm" onclick="removeEventPhoto()">移除照片</button></label><label class="booking-check span2"><input id="evNeedsBooking" type="checkbox" onchange="updateBookingFields()"> 此活動需要預約／抽選／整理券</label><label id="bookingStatusWrap" class="field span2" style="display:none">實際預約狀態<select id="evBookingStatus" onchange="updateBookingFields()"><option value="pending">尚未預約／待抽選</option><option value="reserved">已預約成功</option><option value="ticket">已取得整理券</option></select></label><div id="bookingConditional" class="span2 booking-conditional"><div class="form-grid"><label class="field">預約日期<input id="evBookingDate" type="date"></label><label class="field">預約時間<input id="evBookingTime" type="time"></label><label class="field">預約／整理券編號<input id="evBookingNumber" placeholder="例如：216 號"></label></div></div><label class="field span2">活動情報（限購／特典／入場規則等）<textarea id="evNote" rows="3" placeholder="例如：購買滿額特典、需要事前抽選等"></textarea></label></div><div class="card-actions"><button class="btn primary" type="submit">儲存活動</button><button class="btn" type="button" onclick="clearForm()">清空</button></div></form><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><h3>地區選單管理</h3><div class="note">預設常用地區可使用；自訂地區可以新增、刪除。已被活動使用的地區不能直接刪除。</div><div class="area-tools"><input id="newArea" placeholder="例如：町田"><button type="button" class="btn sm soft" onclick="addCustomArea()">＋ 新增地區</button></div><div id="customAreas"></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><h3>匯入 CSV</h3><p class='note'>目前沒有預載活動，可自行新增或匯入 CSV。</p><input type="file" accept=".csv,text/csv" id="csvFile" class="input" style="width:100%"><p class="note">支援原本 9 欄 CSV 與新版預約欄位；照片不會包含在 CSV 中。若原 Excel 欄位不同，之後可再做對應功能。</p><button class="btn" onclick="importCSV()">匯入資料</button></div><div class="side-panel"><h3>尚未結束的活動 <span id="manageCount" class="muted small"></span></h3><label class="field">搜尋資料<input id="manageSearch" placeholder="搜尋作品、地區、商場" oninput="renderManage()"></label><div class="note" style="margin:10px 0">已結束活動不再列於此清單；符合清理條件的資料可在下方手動刪除。</div><div id="manageList" style="margin-top:10px;max-height:780px;overflow:auto"></div></div></div><div class="side-panel" style="margin-top:18px"><h3>清理過期活動</h3><div class="note">沒有被安排過的活動：結束隔天可清理。曾加入代購行程的活動：等相關行程結束後第 10 天才可清理。刪除前會再次確認，並同步清除相關舊行程紀錄。</div><div id="cleanupList" style="margin-top:12px;max-height:340px;overflow:auto"></div><div class="card-actions"><button class="btn" onclick="toggleAllCleanup(true)">全選可清理</button><button class="btn" onclick="toggleAllCleanup(false)">取消選取</button><button class="btn danger" onclick="deleteCleanup()">刪除選取資料</button></div></div></section>
+<footer class="footer">快閃情報室 · V10.2.5 小字收合整合測試版</footer></main>
+<div class="modal" id="addModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle"><div class="modalbox"><h3 id="addModalTitle">加入代購行程</h3><div class="banner" id="addEventSummary"></div><label class="field">代購行程<select id="addTripSelect" onchange="syncAddDate()"></select></label><label class="field">預計前往日期<input type="date" id="addDate" onchange="checkAddDate()"></label><div class="note" id="addDateHint" style="margin:-3px 0 12px"></div><label class="field">安排類型<select id="addPriority"><option value="main">主要行程</option><option value="optional">有空再去</option></select></label><label class="field">備註（選填）<textarea id="addNote" rows="3" placeholder="例如：缺貨再訪、加單、整理券 13:00"></textarea></label><div class="card-actions"><button class="btn primary" onclick="confirmAddPlan()">確認加入</button><button class="btn" onclick="closeAddModal()">取消</button></div><div class="note" style="margin-top:10px">同一活動可重複加入同一天或不同日期；每次安排有獨立備註與完成狀態。</div></div></div><div class="modal" id="tripModal"><div class="modalbox"><h3 id="tripModalTitle">新增代購行程</h3><label class="field">行程名稱<input id="tripName" placeholder="例如：2027 年 3 月東京代購"></label><label class="field">出發日期<input type="date" id="tripStart"></label><label class="field">結束日期<input type="date" id="tripEnd"></label><div class="note">日期可於之後修改；如縮短行程，已安排在範圍外的紀錄會阻止儲存，避免遺失。</div><div class="card-actions"><button class="btn primary" onclick="saveTripModal()">儲存行程</button><button class="btn" onclick="closeTripModal()">取消</button></div></div></div><div class="modal" id="quickModal"><div class="modalbox"><h3>臨時加入今日行程</h3><label class="field">地點／活動名稱<input id="quickName" placeholder="例如：池袋 Animate 補單"></label><label class="field">地區<input id="quickArea" placeholder="例如：池袋"></label><label class="field">備註<input id="quickNote" placeholder="例如：有空再去"></label><div class="card-actions"><button class="btn primary" onclick="saveQuick()">加入今日行程</button><button class="btn" onclick="closeQuick()">取消</button></div></div></div><div class="toast" id="toast"></div>
+<script>
+const demoEvents=[];
+const demoTrips=[{id:'trip1',name:'2026 年 11 月代購測試',start:'2026-11-01',end:'2026-11-30'}];
+const defaults=()=>({events:demoEvents,trips:demoTrips,plans:[]});
+let state=defaults();let selectedTrip=state.trips[0].id,selectedDay=state.trips[0].start;
+const todayLocal=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};const expired=e=>!!e.end&&e.end<todayLocal();const $=id=>document.getElementById(id),save=()=>{if(!window.cloudReady){toast('尚未連線到雲端，無法儲存');return;}window.cloudSave(JSON.parse(JSON.stringify(state)));},uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),dateDiff=(a,b)=>Math.round((new Date(a+'T12:00:00')-new Date(b+'T12:00:00'))/86400000),active=(e,d)=>!!e.start&&!!e.end&&e.start<=d&&e.end>=d,fullPlace=e=>e.venue+(e.floor?' · '+e.floor:''),eventById=id=>state.events.find(e=>e.id===id),toast=msg=>{const t=$('toast');t.textContent=msg;t.style.display='block';clearTimeout(window._toast);window._toast=setTimeout(()=>t.style.display='none',2300)};
+function switchTab(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));renderAll();window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>switchTab(b.dataset.tab));
+function status(e,d){if(!e.start||!e.end)return ['日期待確認',''];let diff=dateDiff(e.end,d);if(e.start>d)return ['尚未開始','blue'];if(diff<0)return ['已結束',''];if(diff<=3)return ['即將結束','urgent'];return ['進行中','ok']}
+function card(e,d,compact=false){let [s,c]=status(e,d);return `<div class="card"><div class="card-top"><div><div class="card-title">${esc(e.name)}</div>${e.type?`<div class="detail">${esc(e.type)}</div>`:''}</div><span class="chip ${c}">${s}</span></div><div class="detail">⌖ ${esc(e.area)} · ${esc(fullPlace(e))}<br>▦ ${e.start&&e.end?e.start+' ～ '+e.end:(e.rawDate||'日期待確認')}</div>${e.photo?`<div class="photo-toggle" id="photo-${esc(e.id)}"><img class="event-photo" src="${esc(e.photo)}" alt="${esc(e.name)} 活動照片"><button class="btn sm" onclick="toggleEventPhoto('${e.id}')">⌄ 放大照片</button></div>`:''}${reservationBadge(e)}${eventExtra(e)}${plannedDatesCollapse(e)}<div class="card-actions"><button class="btn sm soft" onclick="openAddPlan('${e.id}')">＋ 加入代購</button></div><div class="event-links">${e.url?`<a class="btn sm" href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">官方資訊 ↗</a>`:''}${liveLink(e)}</div></div>`}
+let overviewView='cards';function setOverviewView(v){overviewView=v;$('viewCards').classList.toggle('primary',v==='cards');$('viewArea').classList.toggle('primary',v==='area');renderOverview()}
+function toggleEventPhoto(id){const el=$('photo-'+id);if(!el)return;el.classList.toggle('expanded');el.querySelector('button').textContent=el.classList.contains('expanded')?'⌃ 收合照片':'⌄ 放大照片'}
+
+function renderOverview(){
+const d=$('filterDate').value,area=$('filterArea').value,mode=$('filterStatus').value,q=$('filterText').value.toLowerCase(),joined=$('filterJoined').value;
+const tripId=$('overviewTrip').value, selectedOverviewTrip=state.trips.find(t=>t.id===tripId);
+const outside=!!(d&&selectedOverviewTrip&&(d<selectedOverviewTrip.start||d>selectedOverviewTrip.end));
+// 代購期間先限制活動日期重疊；指定日期再縮小至當天。未指定日期時不使用今天的「進行中」狀態排除未來活動。
+let list=outside?[]:state.events.filter(e=>!expired(e)&&(!selectedOverviewTrip||(e.start<=selectedOverviewTrip.end&&e.end>=selectedOverviewTrip.start))&&(!d||active(e,d))&&(area==='all'||e.area===area)&&[e.name,e.type,e.area,e.venue,e.note].join(' ').toLowerCase().includes(q)&&(!d||mode==='all'||mode==='active'||mode==='ending'&&dateDiff(e.end,d)<=3||mode==='upcoming'&&e.start>d)&&(joined==='all'||(state.plans.some(p=>p.trip===(selectedOverviewTrip?selectedOverviewTrip.id:selectedTrip)&&p.eventId===e.id)===(joined==='joined'))));
+list.sort((a,b)=>(a.end||'9999').localeCompare(b.end||'9999'));
+$('stats').innerHTML=`<div class="stat"><span class="small muted">符合條件</span><b>${list.length}</b></div><div class="stat"><span class="small muted">即將結束</span><b>${d?list.filter(e=>active(e,d)&&dateDiff(e.end,d)<=3).length:'—'}</b></div><div class="stat"><span class="small muted">地區數</span><b>${new Set(list.map(e=>e.area)).size}</b></div>`;
+const notice=outside?'<div class="empty">指定日期不在目前代購期間內，請更改查看日期或選擇「全部活動」。</div>':'';
+if(overviewView==='cards'){$('eventGrid').className='grid';$('eventGrid').innerHTML=notice||(list.length?list.map(e=>card(e,d)).join(''):'<div class="empty">這個條件下沒有活動，試試其他日期或篩選。</div>')}
+else{$('eventGrid').className='grid';const areas=[...new Set(list.map(e=>e.area))];$('eventGrid').innerHTML=notice||(areas.length?areas.map(a=>{const es=list.filter(e=>e.area===a),venues=[...new Set(es.map(e=>e.venue))];return `<div class="overview-area"><div class="overview-area-title">⌖ ${esc(a)} · ${es.length} 場</div>${venues.map(v=>`<div class="overview-area-venue">${esc(v)}</div>${es.filter(e=>e.venue===v).map(e=>card(e,d,true)).join('')}`).join('')}</div>`}).join(''):'<div class="empty">沒有符合條件的活動。</div>')}
+}
+function populateOverviewTrips(){const sel=$('overviewTrip'),prev=sel.value;sel.innerHTML='<option value="">全部活動</option>'+state.trips.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}（${t.start}～${t.end}）</option>`).join('');sel.value=state.trips.some(t=>t.id===prev)?prev:'';}
+
+function renderRegions(){const d=$('regionDate').value,mode=$('regionMode').value,selected=$('regionArea').value,es=state.events.filter(e=>!expired(e)&&(selected==='all'||e.area===selected)&&(mode==='all'||active(e,d)));let allAreas=[...new Set(state.events.filter(e=>!expired(e)).map(e=>e.area))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));$('regionArea').innerHTML='<option value="all">全部地區</option>'+allAreas.map(a=>`<option value="${esc(a)}">${esc(a)}</option>`).join('');$('regionArea').value=allAreas.includes(selected)?selected:'all';let areas=[...new Set(es.map(e=>e.area))].sort((a,b)=>a.localeCompare(b,'zh-Hant'));$('regionGroups').innerHTML=areas.length?areas.map(area=>{let a=es.filter(e=>e.area===area),venues=[...new Set(a.map(e=>e.venue))].sort((x,y)=>x.localeCompare(y,'zh-Hant'));return `<div class="region"><div class="region-head">⌖ ${esc(area)} <span class="small muted">${a.length} 場活動</span></div>${venues.map(v=>`<div class="venue">${esc(v)}</div><div class="venue-list">${a.filter(e=>e.venue===v).sort((x,y)=>x.floor.localeCompare(y.floor)).map(e=>card(e,d,true)).join('')}</div>`).join('')}</div>`}).join(''):'<div class="empty">當天沒有進行中的活動。</div>'}
+function renderTripSelect(){$('tripSelect').innerHTML=state.trips.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('');$('tripSelect').value=selectedTrip}
+function trip(){return state.trips.find(t=>t.id===selectedTrip)||state.trips[0]}
+function changeTrip(){selectedTrip=$('tripSelect').value;selectedDay=trip().start;renderSchedule();renderPasteBar()}
+function daysBetween(a,b){let arr=[],d=new Date(a+'T12:00:00'),end=new Date(b+'T12:00:00');while(d<=end&&arr.length<35){arr.push(d.toISOString().slice(0,10));d.setDate(d.getDate()+1)}return arr}
+function renderSchedule(){renderTripSelect();if($('tripDeleteBtn'))$('tripDeleteBtn').title='手動刪除目前行程（不影響情報庫）';renderPasteBar();const t=trip();$('tripBanner').innerHTML=`<strong>${esc(t.name)}</strong><div class="note">${t.start} ～ ${t.end} · ${daysBetween(t.start,t.end).length} 天 · 點選日期切換當日清單</div>${tripCleanupLabel()}`;$('daystrip').innerHTML=daysBetween(t.start,t.end).map(d=>`<button class="day ${selectedDay===d?'active':''}" onclick="selectDay('${d}')">${d.slice(5).replace('-','/')}<span>${state.plans.filter(p=>p.trip===selectedTrip&&p.day===d).length} 間</span></button>`).join('');renderPicker();renderPlan()}
+function selectDay(d){selectedDay=d;renderSchedule();renderPasteBar()}
+function reservationBadge(e){
+  const st={pending:'尚未預約／待抽選',reserved:'✓ 已預約成功',ticket:'✓ 已取得整理券'};
+  const status=e.bookingStatus;if(!st[status])return '';
+  const details=[];
+  if(e.bookingDate)details.push(`<div class="booking-detail-line">▦ 預約日期：${esc(e.bookingDate.slice(5).replace('-','/'))}</div>`);
+  if(e.bookingTime)details.push(`<div class="booking-detail-line">◷ 預約時間：${esc(e.bookingTime)}</div>`);
+  if(e.bookingNumber)details.push(`<div class="booking-detail-line"><b>預約／整理券備註：</b>${esc(e.bookingNumber)}</div>`);
+  return `<details class="booking-collapse"><summary>${status==='ticket'?'已預約／已取得整理券':status==='reserved'?'已預約成功':'尚未預約／待抽選'}</summary>${details.length?`<div class="booking-collapse-body">${details.join('')}</div>`:'<div class="booking-collapse-body muted small">尚無其他預約資料</div>'}</details>`;
+}
+function plannedDatesCollapse(e, excludeDay=null){
+  if(!e || !e.id)return '';
+  const visits=state.plans.filter(p=>p.eventId===e.id&&p.trip===selectedTrip);
+  const days=[...new Set(visits.map(p=>p.day))].filter(d=>d!==excludeDay).sort();
+  if(!days.length)return '';
+  return `<details class="planned-dates-collapse"><summary>${excludeDay?'另外安排':'已安排'} ${days.length} 個日期</summary><div class="planned-dates-body">${days.map(d=>{
+    const ps=visits.filter(p=>p.day===d);
+    const groups=[...new Set(ps.map(p=>p.optional?'有空再去':'主要行程'))];
+    const done=ps.some(p=>p.done);
+    const label=groups.join('／');
+    return `<div class="pick-visited ${done?'done':''}"><span class="planned-day">${esc(d.slice(5).replace('-','/'))}</span><span class="planned-kind">${esc(label)}</span><span class="planned-state ${done?'is-done':''}">${done?'✓ 已前往':'未完成'}</span></div>`;
+  }).join('')}</div></details>`;
+}
+
+function eventExtra(e,p){const n=(e.note||'').trim(),pn=(p?.note||'').trim();if(!n&&!pn)return '';return `<details class="event-extra"><summary>查看特典／限購／備註</summary>${n?`<div class="detail"><b>活動情報：</b>${esc(n)}</div>`:''}${pn?`<div class="detail"><b>本次跑店備註：</b>${esc(pn)}</div>`:''}</details>`}
+function photoHtml(e,cls){return e.photo?`<img class="${cls}" src="${esc(e.photo)}" alt="${esc(e.name)} 活動照片">`:''}
+function renderPicker(){const q=$('pickSearch').value.toLowerCase();let arr=state.events.filter(e=>[e.name,e.type,e.area,e.venue].join(' ').toLowerCase().includes(q)&&active(e,selectedDay));$('picker').innerHTML=arr.length?arr.map(e=>{const visits=state.plans.filter(p=>p.trip===selectedTrip&&p.eventId===e.id);const days=[...new Set(visits.map(p=>p.day))].sort();const history=plannedDatesCollapse(e);return `<div class="pick"><div class="pick-content"><div class="pick-title">${esc(e.name)}</div>${e.type?`<div class="pick-type">${esc(e.type)}</div>`:''}<div class="pick-line"><span class="symbol">⌖</span><span>${esc(e.area)} · ${esc(fullPlace(e))}</span></div><div class="pick-line"><span class="symbol">▦</span><span>${esc(e.start)} ～ ${esc(e.end)}</span></div>${reservationBadge(e)}${eventExtra(e)}${history}<div class="event-links">${e.url?`<a class="btn sm" href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">官方資訊 ↗</a>`:''}${liveLink(e)}</div></div><div class="pick-side"><button class="btn sm soft" onclick="quickAddToday('${e.id}')">＋ 加入</button>${photoHtml(e,'pick-photo')}</div></div>`}).join(''):'<div class="note" style="padding:20px 0">這天沒有符合條件的活動。請確認活動日期，或新增臨時地點。</div>'}
+
+function quickAddToday(id){const e=eventById(id),t=trip();if(!e||!t)return;if(!active(e,selectedDay)){toast('活動不在選取日期舉辦');return}state.plans.push({id:uid(),trip:selectedTrip,day:selectedDay,eventId:id,optional:false,done:false,note:''});save();renderSchedule();toast('已加入 '+selectedDay+' 主要行程')}
+
+let pendingEventId=null;
+function openAddPlan(id){const e=eventById(id);if(!e)return;pendingEventId=id;$('addEventSummary').innerHTML=`<strong>${esc(e.name)}</strong><div class="note">${esc(e.area)} · ${esc(fullPlace(e))}<br>活動日期：${esc(e.start&&e.end?e.start+' ～ '+e.end:(e.rawDate||'待確認'))}</div>`;$('addTripSelect').innerHTML=state.trips.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('');$('addTripSelect').value=selectedTrip;$('addDate').value=selectedDay;$('addPriority').value='main';$('addNote').value='';checkAddDate();$('addModal').classList.add('show')}
+function closeAddModal(){$('addModal').classList.remove('show');pendingEventId=null}
+function syncAddDate(){const t=state.trips.find(t=>t.id===$('addTripSelect').value);if(t){$('addDate').value=t.start}checkAddDate()}
+function checkAddDate(){const t=state.trips.find(t=>t.id===$('addTripSelect').value),e=eventById(pendingEventId),d=$('addDate').value,h=[];if(!d){h.push('請選擇預計前往日期。')}else{if(t&&(d<t.start||d>t.end))h.push('⚠ 日期不在本次代購期間（'+t.start+' ～ '+t.end+'）。');if(e&&e.start&&e.end&&(d<e.start||d>e.end))h.push('⚠ 這天不在活動舉辦期間，請確認活動日期。');if(e&&(!e.start||!e.end))h.push('提醒：此活動的起迄日期尚未完整確認。')}if(!h.length)h.push('可自由指定日期，與上方「查看日期」篩選無關。');$('addDateHint').textContent=h.join(' ')}
+function confirmAddPlan(){const t=state.trips.find(t=>t.id===$('addTripSelect').value),d=$('addDate').value,e=eventById(pendingEventId);if(!t||!e||!/^\d{4}-\d{2}-\d{2}$/.test(d)||Number.isNaN(new Date(d+'T12:00:00').getTime())){toast('請選擇有效的代購行程與日期');return}if(d<t.start||d>t.end){toast('日期必須在代購行程期間內');return}if(e.start&&e.end&&(d<e.start||d>e.end)&&!confirm('指定日期不在活動舉辦期間，仍要加入嗎？'))return;state.plans.push({id:uid(),trip:t.id,day:d,eventId:e.id,optional:$('addPriority').value==='optional',done:false,note:$('addNote').value.trim()});selectedTrip=t.id;selectedDay=d;save();closeAddModal();renderSchedule();toast('已加入 '+d+' 行程')}
+function addPlan(id){openAddPlan(id)}
+function reservationForVisit(e,p){
+  if(!e||!p)return '';
+  // A booking is for its specific entry date, not for every revisit of an event.
+  if(!e.bookingDate||e.bookingDate!==p.day)return '';
+  return reservationBadge(e);
+}
+function renderPlan(){for(const optional of [false,true]){let arr=state.plans.filter(p=>p.trip===selectedTrip&&p.day===selectedDay&&p.optional===optional);$(optional?'optionalPlan':'mainPlan').innerHTML=arr.length?arr.map((p,i)=>{let e=eventById(p.eventId)||{name:p.customName||'臨時地點',area:p.customArea||'未分類',venue:'',floor:''};return `<div class="plan-item ${optional?'optional':''} ${p.done?'done':''}" draggable="true" ondragstart="dragStart(event,'${p.id}')" ondragover="event.preventDefault()" ondrop="dropPlan(event,'${p.id}')"><div class="plan-top"><div class="num">${optional?'☆':i+1}</div><div class="plan-text"><div class="plan-heading"><div class="plan-name">${esc(e.name)}</div>${e.type?`<div class="plan-type">${esc(e.type)}</div>`:''}</div><div class="plan-content"><div class="plan-meta">⌖ ${esc(e.area)}${e.venue?' · '+esc(fullPlace(e)):''}</div>${reservationForVisit(e,p)}<div class="event-links plan-wide-links">${e.url?`<a class="btn sm" href="${esc(e.url)}" target="_blank" rel="noopener noreferrer">官方資訊 ↗</a>`:''}${liveLink(e)}</div>${eventExtra(e,p)}${plannedDatesCollapse(e,selectedDay)}</div>${photoHtml(e,'plan-thumb')}</div><input type="checkbox" title="已完成" ${p.done?'checked':''} onchange="setDone('${p.id}',this.checked)"></div><div class="plan-actions"><button onclick="movePlan('${p.id}',-1)" ${i===0?'disabled':''}>↑</button><button onclick="movePlan('${p.id}',1)" ${i===arr.length-1?'disabled':''}>↓</button><button onclick="toggleOptional('${p.id}')">${optional?'設為主要':'有空再去'}</button><button onclick="copyPlan('${p.id}')">複製</button><button onclick="editNote('${p.id}')">備註</button><button onclick="removePlan('${p.id}')">移除</button></div></div>`}).join(''):`<div class="empty">${optional?'暫無備選地點':'今天尚未安排主要行程'}</div>`}}
+
+function findPlan(id){return state.plans.find(p=>p.id===id)}function setDone(id,v){findPlan(id).done=v;save();renderSchedule()}function movePlan(id,dir){let p=findPlan(id),arr=state.plans.filter(x=>x.trip===p.trip&&x.day===p.day&&x.optional===p.optional),i=arr.indexOf(p),other=arr[i+dir];if(!other)return;let ix=state.plans.indexOf(p),jx=state.plans.indexOf(other);[state.plans[ix],state.plans[jx]]=[state.plans[jx],state.plans[ix]];save();renderSchedule()}function toggleOptional(id){findPlan(id).optional=!findPlan(id).optional;save();renderSchedule()}let copyingPlanId=null;let copiedPlan=null;
+function tripById(id){return state.trips.find(x=>x.id===id)}
+function copyPlan(id){const p=findPlan(id);if(!p)return;copiedPlan={...p};renderSchedule();renderPasteBar();toast('已複製安排，切換日期後按「貼上安排」')}
+function pastePlan(){if(!copiedPlan){toast('請先複製一筆安排');return}const t=trip();if(selectedDay<t.start||selectedDay>t.end){toast('請選擇本次代購期間內的日期');return}const e=eventById(copiedPlan.eventId);if(e&&e.start&&e.end&&(selectedDay<e.start||selectedDay>e.end)&&!confirm('這一天不在活動舉辦期間，仍要貼上嗎？'))return;state.plans.push({...copiedPlan,id:uid(),trip:selectedTrip,day:selectedDay,done:false});save();renderSchedule();renderPasteBar();toast('已貼上到 '+selectedDay+'，可繼續貼上其他日期')}
+function renderPasteBar(){let bar=$('pasteBar');if(!bar)return;if(!copiedPlan){bar.innerHTML='<span class="muted small">在某筆安排按「複製」，切換日期後即可貼上。</span>';return}const e=eventById(copiedPlan.eventId);bar.innerHTML=`<div class="banner" style="margin:0;flex:1"><strong>已複製：${esc(e?e.name:(copiedPlan.customName||'臨時地點'))}</strong><div class="note">可切換日期後貼上；原行程不會改動</div></div><button class="btn primary" onclick="pastePlan()">貼上安排</button><button class="btn" onclick="copiedPlan=null;renderPasteBar()">清除</button>`}
+function editNote(id){let p=findPlan(id),note=prompt('這次造訪的備註',p.note||'');if(note!==null){p.note=note;save();renderSchedule()}}function removePlan(id){state.plans=state.plans.filter(p=>p.id!==id);save();renderSchedule()}let draggedId=null;function dragStart(ev,id){draggedId=id;ev.dataTransfer.effectAllowed='move'}function dropPlan(ev,id){ev.preventDefault();if(!draggedId||draggedId===id)return;let a=findPlan(draggedId),b=findPlan(id);if(!a||!b||a.day!==b.day||a.optional!==b.optional||a.trip!==b.trip)return;let ai=state.plans.indexOf(a),bi=state.plans.indexOf(b);state.plans.splice(ai,1);state.plans.splice(state.plans.indexOf(b),0,a);draggedId=null;save();renderSchedule()}
+function openQuick(){$('quickModal').classList.add('show')};function closeQuick(){$('quickModal').classList.remove('show')};function saveQuick(){let name=$('quickName').value.trim();if(!name){toast('請輸入地點名稱');return}state.plans.push({id:uid(),trip:selectedTrip,day:selectedDay,customName:name,customArea:$('quickArea').value.trim(),note:$('quickNote').value.trim(),optional:true,done:false});save();closeQuick();['quickName','quickArea','quickNote'].forEach(id=>$(id).value='');renderSchedule();toast('已加入「有空再去」')}
+let editingTrip=false;
+function addTrip(){openTripModal(false)}
+function openTripModal(edit){editingTrip=edit;const t=trip();$('tripModalTitle').textContent=edit?'編輯代購行程':'新增代購行程';$('tripName').value=edit?t.name:'';$('tripStart').value=edit?t.start:'';$('tripEnd').value=edit?t.end:'';$('tripModal').classList.add('show')}
+function closeTripModal(){$('tripModal').classList.remove('show')}
+function saveTripModal(){const name=$('tripName').value.trim(),start=$('tripStart').value,end=$('tripEnd').value;if(!name||!start||!end||end<start||dateDiff(end,start)>34){toast('請填入名稱與正確日期（最多35天）');return}if(editingTrip){const t=trip();if(state.plans.some(p=>p.trip===t.id&&(p.day<start||p.day>end))){toast('行程已有安排落在新日期之外，請先調整那些安排');return}t.name=name;t.start=start;t.end=end;if(selectedDay<start||selectedDay>end)selectedDay=start}else{const id=uid();state.trips.push({id,name,start,end});selectedTrip=id;selectedDay=start}save();closeTripModal();renderAll();toast('行程已儲存')}
+function updateBookingFields(){const checked=$('evNeedsBooking').checked,v=$('evBookingStatus').value;const el=$('bookingConditional');$('bookingStatusWrap').style.display=checked?'flex':'none';if(el)el.style.display=(checked&&(v==='reserved'||v==='ticket'))?'block':'none'}
+function liveLink(e){return e&&e.liveUrl?`<a class="btn sm live-link" href="${esc(e.liveUrl)}" target="_blank" rel="noopener noreferrer">✦ 查看 X／庫存公告 ↗</a>`:''}
+function deleteTripNow(){const t=trip();if(!t)return;const count=state.plans.filter(p=>p.trip===t.id).length;if(!confirm(`確定刪除「${t.name}」？這趟行程的 ${count} 筆每日安排、勾選與個人備註會永久刪除，活動情報仍會保留。`))return;state.plans=state.plans.filter(p=>p.trip!==t.id);state.trips=state.trips.filter(x=>x.id!==t.id);if(!state.trips.length){const id=uid();state.trips.push({id,name:'新代購行程',start:todayLocal(),end:todayLocal()})}selectedTrip=state.trips[0].id;selectedDay=state.trips[0].start;save();renderAll();toast('已刪除行程，活動情報仍保留')}
+function tripCleanupLabel(){const t=trip();if(!t)return '';const n=dateDiff(todayLocal(),t.end);return n>=10?'<span class="pill">已結束 D+10 · 可清理</span>':n>=0?'<span class="pill">行程已結束 · 保留緩衝期</span>':''}
+function clearForm(){pendingPhoto='';$('photoFeedback').textContent='';updatePhotoPreview();$('eventForm').reset();$('editId').value='';$('formTitle').textContent='新增活動情報';$('evNeedsBooking').checked=false;updateBookingFields()}$('eventForm').onsubmit=ev=>{ev.preventDefault();let data={id:$('editId').value||uid(),name:$('evName').value.trim(),type:$('evType').value.trim(),area:$('evArea').value.trim(),venue:$('evVenue').value.trim(),floor:'',url:$('evUrl').value.trim(),start:$('evStart').value,end:$('evEnd').value,note:$('evNote').value.trim(),liveUrl:$('evLiveUrl').value.trim(),bookingStatus:$('evNeedsBooking').checked?$('evBookingStatus').value:'',bookingDate:$('evBookingDate').value,bookingTime:$('evBookingTime').value,bookingNumber:$('evBookingNumber').value.trim(),photo:pendingPhoto};if(data.start&&data.end&&data.end<data.start){toast('結束日不可早於開始日');return}let ix=state.events.findIndex(e=>e.id===data.id);const old=ix<0?null:state.events[ix];if(ix<0)state.events.push(data);else state.events[ix]=data;try{save()}catch(err){if(ix<0)state.events.pop();else state.events[ix]=old;toast('儲存失敗：瀏覽器容量可能不足，請換小張照片');return}clearForm();renderAll();toast('活動已儲存')};
+function editEvent(id){let e=eventById(id);if(!e)return;pendingPhoto=e.photo||'';updatePhotoPreview();$('photoFeedback').textContent=pendingPhoto?'✓ 已有照片，可更換或移除':'';for(let [k,v] of Object.entries({editId:e.id,evName:e.name,evType:e.type,evArea:e.area,evVenue:e.venue,evUrl:e.url,evLiveUrl:e.liveUrl,evStart:e.start,evEnd:e.end,evNote:e.note,evBookingStatus:e.bookingStatus,evBookingDate:e.bookingDate,evBookingTime:e.bookingTime,evBookingNumber:e.bookingNumber}))$(k).value=v||'';$('formTitle').textContent='編輯活動情報';$('evNeedsBooking').checked=['pending','reserved','ticket'].includes(e.bookingStatus);updateBookingFields();switchTab('manage');$('eventForm').scrollIntoView({behavior:'smooth',block:'start'})}
+function deleteEvent(id){if(!confirm('確定刪除此活動？已加入行程的紀錄會保留為未命名地點，建議先確認。'))return;state.events=state.events.filter(e=>e.id!==id);save();renderAll()}
+function cleanupEligible(e){if(!expired(e))return false;const ps=state.plans.filter(p=>p.eventId===e.id);if(!ps.length)return true;const linked=ps.map(p=>state.trips.find(t=>t.id===p.trip));if(linked.some(t=>!t))return false;return linked.every(t=>dateDiff(todayLocal(),t.end)>=10)}
+let cleanupSelected=new Set();
+function renderCleanup(){const eligible=state.events.filter(cleanupEligible);cleanupSelected=new Set([...cleanupSelected].filter(id=>eligible.some(e=>e.id===id)));$('cleanupList').innerHTML=eligible.length?eligible.map(e=>{const ps=state.plans.filter(p=>p.eventId===e.id);const due=ps.length?ps.map(p=>state.trips.find(t=>t.id===p.trip).end).sort().at(-1):e.end;return `<label class="listrow" style="justify-content:flex-start"><input type="checkbox" ${cleanupSelected.has(e.id)?'checked':''} onchange="selectCleanup('${e.id}',this.checked)"><span><b>${esc(e.name)}</b><div class="detail">結束：${esc(e.end)} · ${ps.length?'行程結束 D+10 已到期':'未加入行程'} · ${esc(e.area)}</div></span></label>`}).join(''):'<div class="note" style="padding:14px 0">目前沒有符合刪除條件的活動。</div>'}
+function selectCleanup(id,on){if(on)cleanupSelected.add(id);else cleanupSelected.delete(id)}
+function toggleAllCleanup(on){cleanupSelected=on?new Set(state.events.filter(cleanupEligible).map(e=>e.id)):new Set();renderCleanup()}
+function deleteCleanup(){const ids=[...cleanupSelected].filter(id=>{const e=eventById(id);return e&&cleanupEligible(e)});if(!ids.length){toast('請先勾選符合條件的活動');return}const planCount=state.plans.filter(p=>ids.includes(p.eventId)).length;if(!confirm(`確定永久刪除 ${ids.length} 筆過期活動${planCount?'，以及 '+planCount+' 筆相關舊行程紀錄':''}？此操作無法復原，建議先匯出 CSV 備份活動。`))return;state.events=state.events.filter(e=>!ids.includes(e.id));state.plans=state.plans.filter(p=>!ids.includes(p.eventId));cleanupSelected.clear();save();renderAll();toast('已清理 '+ids.length+' 筆活動')}
+function renderManage(){let q=$('manageSearch').value.toLowerCase(),es=state.events.filter(e=>!expired(e)&&[e.name,e.type,e.area,e.venue].join(' ').toLowerCase().includes(q));$('manageCount').textContent='（'+es.length+' 筆）';$('manageList').innerHTML=es.length?es.map(e=>`<div class="listrow"><div><b>${esc(e.name)}</b><div class="detail">${esc(e.area)} · ${esc(fullPlace(e))}<br>${e.start&&e.end?e.start+' ～ '+e.end:(e.rawDate||'日期待確認')}</div></div><div class="card-actions"><button class="btn sm" onclick="editEvent('${e.id}')">編輯</button><button class="btn sm danger" onclick="deleteEvent('${e.id}')">刪除</button></div></div>`).join(''):'<div class="empty">目前沒有符合條件的活動</div>';renderCleanup()}
+const headers=['作品名稱','活動名稱','地區','商場','樓層','開始日期','結束日期','官方連結','備註','預約狀態','預約日期','預約時間','預約編號','即時公告連結'];function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}function exportCSV(){let lines=[headers,...state.events.map(e=>[e.name,e.type,e.area,e.venue,e.floor,e.start,e.end,e.url,e.note,e.bookingStatus,e.bookingDate,e.bookingTime,e.bookingNumber,e.liveUrl])];let blob=new Blob(['\ufeff'+lines.map(r=>r.map(csvCell).join(',')).join('\r\n')],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='快閃情報_'+new Date().toISOString().slice(0,10)+'.csv';a.click();URL.revokeObjectURL(url)}
+function parseCSV(text){let rows=[],row=[],val='',quoted=false;for(let i=0;i<text.length;i++){let c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){val+='"';i++}else quoted=!quoted}else if(c===','&&!quoted){row.push(val);val=''}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(val);if(row.some(x=>x!==''))rows.push(row);row=[];val=''}else val+=c}row.push(val);if(row.some(x=>x!==''))rows.push(row);return rows}
+async function importCSV(){let f=$('csvFile').files[0];if(!f){toast('請先選擇 CSV 檔案');return}let rows=parseCSV((await f.text()).replace(/^\ufeff/,'')),head=rows.shift()||[];let index=headers.map(h=>head.indexOf(h));if(index.slice(0,9).some(i=>i<0)){toast('CSV 欄位不符，請先匯出範本查看');return}let count=0;for(let row of rows){let v=index.map(i=>(i<0?'':row[i]||'').trim());if(!v[0]||!v[2]||!v[3]||!/^\d{4}-\d{2}-\d{2}$/.test(v[5])||!/^\d{4}-\d{2}-\d{2}$/.test(v[6])||v[6]<v[5])continue;state.events.push({id:uid(),name:v[0],type:v[1],area:v[2],venue:v[3]+(v[4]?' · '+v[4]:''),floor:'',start:v[5],end:v[6],url:v[7],note:v[8],bookingStatus:v[9]||'',bookingDate:v[10]||'',bookingTime:v[11]||'',bookingNumber:v[12]||'',liveUrl:v[13]||''});count++}save();renderAll();toast('已匯入 '+count+' 筆活動')}
+const DEFAULT_AREAS=['澀谷','新宿','池袋','秋葉原','原宿','上野','有樂町／日比谷','六本木／東京塔','其他／多地區'];
+function populateManageAreas(){if(!Array.isArray(state.customAreas))state.customAreas=[];const old=$('evArea').value;const areas=[...new Set([...DEFAULT_AREAS,...state.customAreas,...state.events.map(e=>e.area).filter(Boolean)])].sort((a,b)=>a.localeCompare(b,'zh-Hant'));$('evArea').innerHTML='<option value="">請選擇地區</option>'+areas.map(a=>`<option value="${esc(a)}">${esc(a)}</option>`).join('');$('evArea').value=areas.includes(old)?old:'';renderCustomAreas()}
+function addCustomArea(){const a=$('newArea').value.trim();if(!a){toast('請輸入地區名稱');return}if([...DEFAULT_AREAS,...(state.customAreas||[])].includes(a)){toast('這個地區已存在');return}state.customAreas.push(a);$('newArea').value='';save();populateManageAreas();$('evArea').value=a;toast('已新增地區')}
+function deleteCustomArea(a){if(state.events.some(e=>e.area===a)){toast('此地區有活動使用，請先修改相關活動的地區');return}if(!confirm('刪除自訂地區「'+a+'」？'))return;state.customAreas=state.customAreas.filter(x=>x!==a);save();populateManageAreas()}
+function renderCustomAreas(){const el=$('customAreas');if(!el)return;el.innerHTML=(state.customAreas||[]).map((a,i)=>`<span class="area-tag">${esc(a)} <button type="button" onclick="deleteCustomArea(state.customAreas[${i}])">✕</button></span>`).join('')||'<div class="note">尚未新增自訂地區。</div>'}
+
+let pendingPhoto='';function previewEventPhoto(input){const file=input.files&&input.files[0];if(!file)return;const feedback=$('photoFeedback');feedback.textContent='正在處理圖片…';if(!file.type.startsWith('image/')){feedback.textContent='圖片格式不支援，請選 JPG 或 PNG';toast('請選擇圖片檔案');return}const reader=new FileReader();reader.onerror=()=>{feedback.textContent='讀取圖片失敗，請換一張 JPG 或 PNG'};reader.onload=()=>{const im=new Image();im.onerror=()=>{feedback.textContent='無法解碼圖片，請改用 JPG 或 PNG'};im.onload=()=>{try{const canvas=document.createElement('canvas');const ratio=Math.min(1,680/Math.max(im.width,im.height));canvas.width=Math.max(1,Math.round(im.width*ratio));canvas.height=Math.max(1,Math.round(im.height*ratio));canvas.getContext('2d').drawImage(im,0,0,canvas.width,canvas.height);pendingPhoto=canvas.toDataURL('image/jpeg',0.65);updatePhotoPreview();feedback.textContent='✓ 照片已載入，請按「儲存活動」';toast('照片已載入')}catch(err){feedback.textContent='圖片處理失敗：'+err.message}};im.src=reader.result};reader.readAsDataURL(file)}
+
+function updatePhotoPreview(){const el=$('evPhotoPreview');el.style.display=pendingPhoto?'block':'none';if(pendingPhoto)el.src=pendingPhoto;else el.removeAttribute('src')}
+function removeEventPhoto(){pendingPhoto='';$('evPhoto').value='';$('photoFeedback').textContent='照片已移除，儲存後生效';updatePhotoPreview()}
+function renderAll(){populateOverviewTrips();populateManageAreas();let areas=[...new Set(state.events.map(e=>e.area))].sort((a,b)=>a.localeCompare(b,'zh-Hant')),v=$('filterArea').value;$('filterArea').innerHTML='<option value="all">全部地區</option>'+areas.map(a=>`<option value="${esc(a)}">${esc(a)}</option>`).join('');$('filterArea').value=areas.includes(v)?v:'all';renderOverview();renderRegions();renderSchedule();renderManage()}
+function resetDemo(){if(confirm('確定重設？此空白測試版中新增的活動與行程都會清除。')){state=defaults();selectedTrip='trip1';selectedDay='2026-11-01';save();clearForm();renderAll();toast('已清空並還原空白測試版')}}renderAll();updateBookingFields();
+window.applyCloudState = data => {state = data && Array.isArray(data.events) && Array.isArray(data.trips) && Array.isArray(data.plans) && data.trips.length ? data : defaults();if(!state.trips.some(t=>t.id===selectedTrip))selectedTrip=state.trips[0].id;const tr=state.trips.find(t=>t.id===selectedTrip);if(selectedDay<tr.start||selectedDay>tr.end)selectedDay=tr.start;renderAll();};
+</script>
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
+import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
+import {getFirestore,doc,onSnapshot,setDoc} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+const firebaseConfig = {
+  apiKey: "AIzaSyCD2Gzss5na62kt5dne3hw_ubXNDPmzIhw",
+  authDomain: "anime-popup-planner.firebaseapp.com",
+  projectId: "anime-popup-planner",
+  storageBucket: "anime-popup-planner.firebasestorage.app",
+  messagingSenderId: "11189676161",
+  measurementId: "G-FX7LSKWYLF",
+  appId: "1:11189676161:web:e348a3720a8a009d000580"
+};
+const ALLOWED = ['6WDOTm1SdaWgjD7g9gDjVVWR5Oh1','RyV6mR1C8rTiwql87K4jrio07GS2'];
+const auth = getAuth(initializeApp(firebaseConfig));
+const db = getFirestore();
+const ref = doc(db,'shared','planner');
+const status = document.getElementById('firebase-auth-status');
+const login = document.getElementById('firebase-login');
+const logout = document.getElementById('firebase-logout');
+login.disabled = false; // Firebase SDK 已初始化，開放登入按鈕
+const veil = document.createElement('div');
+veil.style.cssText='position:fixed;inset:0;z-index:900;background:rgba(250,248,255,.97);display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:17px;color:#5e4e78';
+veil.textContent='正在確認登入與雲端資料…';
+document.body.appendChild(veil);
+let unsub=null, generation=0, saving=false, pending=null, pendingCount=0;
+function lock(message){window.cloudReady=false;veil.style.display='flex';veil.textContent=message;}
+function showError(err){status.textContent='雲端錯誤：'+(err.code||err.message);lock('雲端連線失敗，請檢查網路與 Firestore 規則。為避免資料遺失，暫停編輯。');}
+window.cloudSave = data => {
+  if(!window.cloudReady)return;
+  pending=data;
+  pendingCount++;
+  flush();
+};
+async function flush(){
+  if(saving || !pending)return;
+  saving=true;
+  const data=pending;pending=null;
+  const session=generation;
+  status.textContent='正在同步變更到雲端…';
+  try{
+    await setDoc(ref,{state:data,updatedAt:new Date().toISOString()});
+    if(session===generation){pendingCount=Math.max(0,pendingCount-1);status.textContent='✓ 已儲存到雲端（活動／預約／行程）';}
+  }catch(err){if(session===generation)showError(err)}
+  finally{saving=false;if(pending&&session===generation)flush();}
+}
+login.addEventListener('click',async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){status.textContent='登入失敗：'+(e.code||e.message)}});
+logout.addEventListener('click',async()=>{await signOut(auth)});
+onAuthStateChanged(auth,user=>{
+  generation++;
+  if(unsub){unsub();unsub=null}
+  pending=null;pendingCount=0;saving=false;
+  login.style.display=user?'none':'';
+  logout.style.display=user?'':'none';
+  if(!user){status.textContent='尚未登入 Google';lock('請先點選上方「使用 Google 登入」才能讀寫共用資料。');return}
+  if(!ALLOWED.includes(user.uid)){status.textContent='此帳號尚未獲授權';lock('此 Google 帳號沒有共用資料的存取權限。');return}
+  status.textContent='已登入 '+user.email+'｜正在連線…';
+  lock('正在載入妳和姊姊的共用資料…');
+  unsub=onSnapshot(ref,snap=>{
+    if(!snap.metadata.fromCache && !pending && !saving){
+      window.applyCloudState(snap.exists()?snap.data().state:null);
+      window.cloudReady=true;
+      veil.style.display='none';
+      status.textContent='✓ 雲端已連線｜'+user.email;
+    } else if(snap.metadata.fromCache){status.textContent='等待伺服器確認，暫停編輯…';}
+  },showError);
+},showError);
+</script>
+</body></html>
